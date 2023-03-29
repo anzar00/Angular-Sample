@@ -1,0 +1,14 @@
+<h1>Sample Dashboard</h1>
+
+<p>Welcome to the dashboard, user!</p>
+
+<div>
+    <h1>All Bookings</h1>
+    <div class="card-background" *ngFor="let flightDetail of flightDetails">
+        <p>Flight Operator - {{ flightDetail.flightName }}</p>
+        <p>{{ flightDetail.location.from }} - {{ flightDetail.location.to }}</p>
+        <p>Price : {{ flightDetail.cost  }}</p>
+        <p>Distance : {{ flightDetail.distance }} KM</p>
+        <button (click)="onClick()">Edit</button>
+    </div>
+</div>
