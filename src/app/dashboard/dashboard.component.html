@@ -4,11 +4,14 @@
 
 <div>
     <h1>All Bookings</h1>
-    <div class="card-background" *ngFor="let flightDetail of flightDetails">
-        <p>Flight Operator - {{ flightDetail.flightName }}</p>
-        <p>{{ flightDetail.location.from }} - {{ flightDetail.location.to }}</p>
-        <p>Price : {{ flightDetail.cost  }}</p>
-        <p>Distance : {{ flightDetail.distance }} KM</p>
-        <button (click)="onClick()">Edit</button>
+    <!-- [ngClass]="['card-background']"  -->
+    <div *ngFor="let flightDetail of flightDetails; trackBy: trackbyFlightDetail" ngClass="cards">
+        <div ngClass="card-background :" *ngIf="flightDetail.availability">
+            <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flightDetail.flightName }}</p>
+            <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | lowercase }}</p>
+            <p>Price : {{ flightDetail.cost  }}</p>
+            <p>Distance : {{ flightDetail.distance }} KM</p>
+            <button (click)="onClick()">Edit</button>
+        </div>
     </div>
 </div>

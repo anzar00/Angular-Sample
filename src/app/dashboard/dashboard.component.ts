@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
       },
       cost: 3500,
       distance: 650,
+      availability: true,
     },
     {
       flightName: "Air India",
@@ -25,6 +26,7 @@ export class DashboardComponent implements OnInit {
       },
       cost: 3500,
       distance: 950,
+      availability: false,
     },
     {
       flightName: "Spice Jet",
@@ -34,6 +36,7 @@ export class DashboardComponent implements OnInit {
       },
       cost: 7500,
       distance: 1500,
+      availability: false
     },
     {
       flightName: "Air Asia",
@@ -43,6 +46,7 @@ export class DashboardComponent implements OnInit {
       },
       cost: 3500,
       distance: 650,
+      availability: true,
     },
     {
       flightName: "Vistara",
@@ -52,6 +56,7 @@ export class DashboardComponent implements OnInit {
       },
       cost: 3500,
       distance: 650,
+      availability: true,
     }
   ];
 
@@ -67,6 +72,11 @@ export class DashboardComponent implements OnInit {
 
   onClick() {
     alert("Edit Button Clicked")
+  }
+
+  trackbyFlightDetail(index: number, flightDetail: any): number {
+    console.log("Printing Index and Flight Details: ", index, flightDetail) 
+    return flightDetail.id;
   }
 
 }
