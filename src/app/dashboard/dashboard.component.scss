@@ -18,7 +18,35 @@
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 
+.btn-edit{
+    background-color: #f0a24e;
+    border-color: #eda85f;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: #ec8415;
+        border-color: #eda85f;
+    }
+}
 
+.btn-view{
+    background-color: #27e811;
+    border-color: #28831e;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: #79da6e;
+        border-color: #28831e;
+    }
+}
 
 
 

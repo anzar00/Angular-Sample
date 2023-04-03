@@ -11,7 +11,18 @@
             <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | lowercase }}</p>
             <p>Price : {{ flightDetail.cost  }}</p>
             <p>Distance : {{ flightDetail.distance }} KM</p>
-            <button (click)="onClick()">Edit</button>
+            <!-- <button routerLink="/edit-flight">Edit</button> -->
+            <button class="btn-view" routerLink="/view-flight"
+            [queryParams]="{
+                id: flightDetail.id,
+                flightName: flightDetail.flightName,
+                from: flightDetail.location.from,
+                to: flightDetail.location.to,
+                cost: flightDetail.cost,
+                distance: flightDetail.distance
+            }"
+            >View</button>
+            <button class="btn-edit" (click)="onClick()">Edit</button>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -65,13 +66,14 @@ export class DashboardComponent implements OnInit {
   // cost: Number = 3500;
   // distance: Number = 650;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onClick() {
-    alert("Edit Button Clicked")
+    // alert("Edit Button Clicked")
+    this.router.navigate(['/edit-flight'])
   }
 
   trackbyFlightDetail(index: number, flightDetail: any): number {
