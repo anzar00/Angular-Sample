@@ -1,0 +1,70 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "flightName": "Indigo",
+      "location": {
+        "from": "Bangalore",
+        "to": "Hyderabad"
+      },
+      "cost": 3500,
+      "distance": 650,
+      "availability": true
+    },
+    {
+      "id": 2,
+      "flightName": "SpiceJet",
+      "location": {
+        "from": "New Delhi",
+        "to": "Mumbai"
+      },
+      "cost": 4500,
+      "distance": 1140,
+      "availability": true
+    },
+    {
+      "id": 3,
+      "flightName": "AirAsia",
+      "location": {
+        "from": "Kolkata",
+        "to": "Chennai"
+      },
+      "cost": 4000,
+      "distance": 1360,
+      "availability": false
+    },
+    {
+      "id": 4,
+      "flightName": "GoAir",
+      "location": {
+        "from": "Mumbai",
+        "to": "Goa"
+      },
+      "cost": 2500,
+      "distance": 590,
+      "availability": true
+    },
+    {
+      "id": 5,
+      "flightName": "Vistara",
+      "location": {
+        "from": "Cochin",
+        "to": "Bangalore"
+      },
+      "cost": 2800,
+      "distance": 550,
+      "availability": true
+    },
+    {
+      "id": 6,
+      "flightName": "AirIndia",
+      "location": {
+        "from": "Jaipur",
+        "to": "New Delhi"
+      },
+      "cost": 3500,
+      "distance": 280,
+      "availability": false
+    }
+  ]
+}
