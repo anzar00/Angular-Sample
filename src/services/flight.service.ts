@@ -30,4 +30,36 @@ export class FlightService {
       )
     );
   }
+
+  getFlight(id: number){
+    return this.httpClient.get<any>(`${this.flightServiceUrl}`+"flights/"+`${id}`).pipe(
+      map(
+        (data: any) => {
+          console.log("Printing Data: ", data);
+          return data;
+        }
+      ), catchError(
+        (error: any) => {
+          console.log("Printing Error: ", error);
+          return error;
+        }
+      )
+    );
+  }
+
+  addFlight(flight: any){
+    return this.httpClient.post<any>(`${this.flightServiceUrl}`+"flights", flight).pipe(
+      map(
+        (data: any) => {
+          console.log("Printing Data: ", data);
+          return data;
+        }
+      ), catchError(
+        (error: any) => {
+          console.log("Printing Error: ", error);
+          return error;
+        }
+      )
+    );
+  }
 }

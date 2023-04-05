@@ -2,10 +2,10 @@
     <h1>View Flight</h1>
     <div ngClass="cards">
         <div class="card-background">
-            <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flight.flightName }}</p>
-            <p>{{ flight.from | uppercase }} - {{ flight.to | lowercase }}</p>
-            <p>Price : {{ flight.cost  }}</p>
-            <p>Distance : {{ flight.distance }} KM</p>
+            <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flightDetails.flightName }}</p>
+            <p>{{ flightDetails.location.from | uppercase }} - {{ flightDetails.location.to | lowercase }}</p>
+            <p>Price : {{ flightDetails.cost  }}</p>
+            <p>Distance : {{ flightDetails.distance }} KM</p>
             <button class="btn-back" routerLink="/dashboard">Back</button>
         </div>
     </div>

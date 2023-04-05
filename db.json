@@ -31,7 +31,7 @@
       },
       "cost": 4000,
       "distance": 1360,
-      "availability": false
+      "availability": true
     },
     {
       "id": 4,
@@ -64,7 +64,7 @@
       },
       "cost": 3500,
       "distance": 280,
-      "availability": false
+      "availability": true
     }
   ]
 }

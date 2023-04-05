@@ -1,7 +1,4 @@
 .cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -48,6 +45,20 @@
     }
 }
 
+.btn-add{
+    background-color: #e82727;
+    border-color: #e82727;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: #e25858;
+        border-color: #e82727;
+    }
+}
 
 
 

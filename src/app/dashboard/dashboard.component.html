@@ -1,28 +1,34 @@
+<div class="container">
 <h1>Sample Dashboard</h1>
 
 <p>Welcome to the dashboard, user!</p>
 
-<div>
-    <h1>All Bookings</h1>
+    <div>
+        <h1>All Bookings</h1>
+        <button routerLink="/add-flight" class="btn-add">Add Flight</button>
+    </div>
     <!-- [ngClass]="['card-background']"  -->
-    <div *ngFor="let flightDetail of flightDetails; trackBy: trackbyFlightDetail" ngClass="cards">
-        <div ngClass="card-background :" *ngIf="flightDetail.availability">
-            <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flightDetail.flightName }}</p>
-            <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | lowercase }}</p>
-            <p>Price : {{ flightDetail.cost  }}</p>
-            <p>Distance : {{ flightDetail.distance }} KM</p>
-            <!-- <button routerLink="/edit-flight">Edit</button> -->
-            <button class="btn-view" routerLink="/view-flight"
-            [queryParams]="{
-                id: flightDetail.id,
-                flightName: flightDetail.flightName,
-                from: flightDetail.location.from,
-                to: flightDetail.location.to,
-                cost: flightDetail.cost,
-                distance: flightDetail.distance
-            }"
-            >View</button>
-            <button class="btn-edit" (click)="onClick()">Edit</button>
+    <div class="row">
+        <div *ngFor="let flightDetail of flightDetails; trackBy: trackbyFlightDetail" class="col-md-3" ngClass="cards">
+            <div ngClass="card-background :" *ngIf="flightDetail.availability">
+                <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flightDetail.flightName }}</p>
+                <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | lowercase }}</p>
+                <p>Price : {{ flightDetail.cost }}</p>
+                <p>Distance : {{ flightDetail.distance }} KM</p>
+                <!-- <button routerLink="/edit-flight">Edit</button> -->
+                <!-- <button class="btn-view" routerLink="/view-flight"
+                [queryParams]="{
+                    id: flightDetail.id,
+                    flightName: flightDetail.flightName,
+                    from: flightDetail.location.from,
+                    to: flightDetail.location.to,
+                    cost: flightDetail.cost,
+                    distance: flightDetail.distance
+                }"
+                >View</button> -->
+                <button routerLink="/view-flight" class="btn-view" [queryParams]="{id : flightDetail.id}">View</button>
+                <button class="btn-edit" (click)="onClick()">Edit</button>
+            </div>
         </div>
     </div>
 </div>
