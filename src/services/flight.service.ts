@@ -11,6 +11,7 @@ export class FlightService {
   flightServiceUrl: string = ""; 
 
   constructor(private httpClient: HttpClient ) {
+    // this.flightServiceUrl =  "http://localhost:3000/"
     this.flightServiceUrl = environment.flightService;
    }
 

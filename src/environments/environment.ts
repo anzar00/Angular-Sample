@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,
+    production: true,
     flightService : "http://localhost:3000/"
 };
