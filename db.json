@@ -65,6 +65,17 @@
       "cost": 3500,
       "distance": 280,
       "availability": true
+    },
+    {
+      "flightName": "",
+      "location": {
+        "from": "",
+        "to": ""
+      },
+      "price": 0,
+      "distance": 0,
+      "availability": true,
+      "id": 7
     }
   ]
 }

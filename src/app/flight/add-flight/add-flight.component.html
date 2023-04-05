@@ -1,4 +1,45 @@
-<div class="container pt-4 mt-4">
-    <h1 class="mt-4 mb-4">Add Flight</h1>
-    <button class="btn btn-primary" routerLink="/dashboard">Back</button>
+<div class="container">
+    <div>
+        <h1 class="mt-4 mb-4">Add Flight</h1>
+        <button class="btn btn-primary" routerLink="/dashboard">Back</button>
+    </div>
+    <hr>
+    <div class="container">
+        <!-- Form to add flight -->
+        <form [formGroup] = "flightForm" (submit)="onSubmit()">
+            <div>
+                <label class="form-label" for="flightName">Flight Name</label>
+                <input class="form-control" type="text" formControlName="flightName" id="flightName">
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-md-6">
+                    <label class="form-label" for="from">From Location</label>
+                    <input class="form-control" type="text" formControlName="from" id="from">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="to">To Location</label>
+                    <input class="form-control" type="text" formControlName="to" id="to">
+                </div>
+            </div>
+            <div>
+                <label class="form-label" for="price">price</label>
+                <input class="form-control" type="text" formControlName="price" id="price">
+            </div>
+            <div>
+                <label class="form-label" for="distance">distance</label>
+                <input class="form-control" type="text" formControlName="distance" id="distance">
+            </div>
+            <div>
+                <label class="form-label" for="availability">availability</label>
+                <select class="form-control" formControlName="availability" id="availability">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+            </div>
+            <div class="mt-2">
+                 <button type="submit" class="btn btn-success px-2">Add</button>
+            </div>
+        </form>
+    </div>
+
 </div>

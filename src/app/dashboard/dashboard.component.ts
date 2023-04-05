@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { FlightService } from 'src/services/flight.service';
 
@@ -16,7 +17,9 @@ export class DashboardComponent implements OnInit {
   // cost: Number = 3500;
   // distance: Number = 650;
 
-  constructor(private router: Router, private flightService: FlightService) { }
+  constructor(private router: Router, private flightService: FlightService, private titleService : Title) { 
+    this.titleService.setTitle("Dashboard");
+  }
 
   ngOnInit(): void {
     this.getFlights();

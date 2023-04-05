@@ -1,12 +1,16 @@
 <div class="container">
-<h1>Sample Dashboard</h1>
+    <div class="mt-2 mb-2">
+        <h1>Sample Dashboard</h1>
+        
+        <p>Welcome to the dashboard, user!</p>
+    </div>
 
-<p>Welcome to the dashboard, user!</p>
 
-    <div>
+    <div class="d-flex flex-row justify-content-between">
         <h1>All Bookings</h1>
         <button routerLink="/add-flight" class="btn-add">Add Flight</button>
     </div>
+    <hr>
     <!-- [ngClass]="['card-background']"  -->
     <div class="row">
         <div *ngFor="let flightDetail of flightDetails; trackBy: trackbyFlightDetail" class="col-md-3" ngClass="cards">

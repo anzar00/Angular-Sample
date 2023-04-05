@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { FlightService } from 'src/services/flight.service';
 
@@ -13,7 +14,9 @@ export class ViewFlightComponent implements OnInit {
   flightId: any;
   flightDetails: any;
 
-  constructor(private route: ActivatedRoute, private flightService : FlightService) { }
+  constructor(private route: ActivatedRoute, private flightService : FlightService, private titleService : Title) {
+    this.titleService.setTitle("View Flight");
+   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
