@@ -1,12 +1,20 @@
-<div>
-    <h1>View Flight</h1>
+<div class="container">
+    <div class="mt-2 mb-2">
+        <h1>Flight Application</h1>
+        <hr>
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+        <h2>View Flight</h2>
+        <button routerLink="/dashboard" class="btn btn-primary">Back</button>
+    </div>
+    <hr>
     <div ngClass="cards">
         <div class="card-background">
-            <p [ngStyle]="{'color':'white'}">Flight Operator - {{ flightDetails.flightName }}</p>
+            <h3 [ngStyle]="{'color':'black'}">Flight Operator - {{ flightDetails.flightName }}</h3>
             <p>{{ flightDetails.location.from | uppercase }} - {{ flightDetails.location.to | lowercase }}</p>
             <p>Price : {{ flightDetails.cost  }}</p>
             <p>Distance : {{ flightDetails.distance }} KM</p>
-            <button class="btn-back" routerLink="/dashboard">Back</button>
+            <button class="btn btn-danger">Book</button>
         </div>
     </div>
 </div>

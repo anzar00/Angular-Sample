@@ -1,12 +1,16 @@
 <div class="container">
-    <div>
-        <h1 class="mt-4 mb-4">Add Flight</h1>
+    <div class="mt-2 mb-2">
+        <h1>Flight Application</h1>
+        <hr>
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+        <h1>Add Flight</h1>
         <button class="btn btn-primary" routerLink="/dashboard">Back</button>
     </div>
     <hr>
-    <div class="container">
+    <div class="container formContainer mt-5">
         <!-- Form to add flight -->
-        <form [formGroup] = "flightForm" (submit)="onSubmit()">
+        <form [formGroup] = "flightForm" (submit)="onSubmit()" class="myForm">
             <div>
                 <label class="form-label" for="flightName">Flight Name</label>
                 <input class="form-control" type="text" formControlName="flightName" id="flightName">
