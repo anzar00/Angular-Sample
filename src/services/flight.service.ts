@@ -62,4 +62,37 @@ export class FlightService {
       )
     );
   }
+
+  deleteFlight(id: number){
+    return this.httpClient.delete<any>(`${this.flightServiceUrl}`+"flights/"+`${id}`).pipe(
+      map(
+        (data: any) => {
+          console.log("Printing Data: ", data);
+          // window.location.reload();
+          return data;
+        }
+      ), catchError(
+        (error: any) => {
+          console.log("Printing Error: ", error);
+          return error;
+        }
+      )
+    );
+  }
+
+  editFlight(flight: any){
+    return this.httpClient.put<any>(`${this.flightServiceUrl}`+"flights/"+`${flight.id}`, flight).pipe(
+      map(
+        (data: any) => {
+          console.log("Printing Data: ", data);
+          return data;
+        }
+      ), catchError(
+        (error: any) => {
+          console.log("Printing Error: ", error);
+          return error;
+        }
+      )
+    );
+  }
 }

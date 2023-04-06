@@ -8,7 +8,7 @@
         <button routerLink="/dashboard" class="btn btn-primary">Back</button>
     </div>
     <hr>
-    <div ngClass="cards">
+    <div [ngClass]="{'cards': true}">
         <div class="card-background">
             <h3 [ngStyle]="{'color':'black'}">Flight Operator - {{ flightDetails.flightName }}</h3>
             <p>{{ flightDetails.location.from | uppercase }} - {{ flightDetails.location.to | lowercase }}</p>

@@ -3,6 +3,8 @@
         <h1>Flight Dashboard</h1>
         
         <p>Welcome to the dashboard, user!</p>
+
+        <hr>
     </div>
 
 
@@ -16,7 +18,7 @@
         <div *ngFor="let flightDetail of flightDetails; trackBy: trackbyFlightDetail" class="col-md-3" ngClass="cards">
             <div ngClass="card-background :" *ngIf="flightDetail.availability">
                 <h4 [ngStyle]="{'color':'black'}">Flight Operator - {{ flightDetail.flightName }}</h4>
-                <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | lowercase }}</p>
+                <p>{{ flightDetail.location.from | uppercase }} - {{ flightDetail.location.to | uppercase }}</p>
                 <p>Price : {{ flightDetail.cost }}</p>
                 <p>Distance : {{ flightDetail.distance }} KM</p>
                 <!-- <button routerLink="/edit-flight">Edit</button> -->
@@ -30,8 +32,11 @@
                     distance: flightDetail.distance
                 }"
                 >View</button> -->
-                <button routerLink="/view-flight" class="btn-view" [queryParams]="{id : flightDetail.id}">View</button>
-                <button class="btn-edit" (click)="onClick()">Edit</button>
+                <div class="d-flex flex-row justify-content-between">
+                    <button routerLink="/view-flight" class="btn-view" [queryParams]="{id : flightDetail.id}">View</button>
+                    <button class="btn-edit" routerLink="/edit-flight" [queryParams]="{id : flightDetail.id}">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteFlight(flightDetail.id)">Delete</button>
+                </div>
             </div>
         </div>
     </div>

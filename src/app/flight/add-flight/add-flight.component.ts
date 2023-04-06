@@ -20,7 +20,7 @@ export class AddFlightComponent implements OnInit {
       from: '',
       to: ''
     },
-    price: 0,
+    cost: 0,
     distance: 0,
     availability: true
   }
@@ -36,7 +36,7 @@ export class AddFlightComponent implements OnInit {
     flightName: new FormControl(''),
     from: new FormControl(''),
     to: new FormControl(''),
-    price: new FormControl(0),
+    cost: new FormControl(0),
     distance: new FormControl(0),
     availability : new FormControl(true)
   });
@@ -47,7 +47,7 @@ export class AddFlightComponent implements OnInit {
     this.flightDetails.flightName = this.flightForm.controls['flightName'].value;
     this.flightDetails.location.from = this.flightForm.controls['from'].value;
     this.flightDetails.location.to = this.flightForm.controls['to'].value;
-    this.flightDetails.price = this.flightForm.controls['price'].value;
+    this.flightDetails.cost = this.flightForm.controls['cost'].value;
     this.flightDetails.distance = this.flightForm.controls['distance'].value;
     this.flightDetails.availability = this.flightForm.controls['availability'].value;
 

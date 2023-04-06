@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 import { FlightService } from 'src/services/flight.service';
 
 @Component({
@@ -17,7 +16,7 @@ export class DashboardComponent implements OnInit {
   // cost: Number = 3500;
   // distance: Number = 650;
 
-  constructor(private router: Router, private flightService: FlightService, private titleService : Title) { 
+  constructor(private flightService: FlightService, private titleService : Title) { 
     this.titleService.setTitle("Dashboard");
   }
 
@@ -25,10 +24,19 @@ export class DashboardComponent implements OnInit {
     this.getFlights();
   }
 
-  onClick() {
-    // alert("Edit Button Clicked")
-    this.router.navigate(['/edit-flight'])
+  deleteFlight(id: any) {
+    console.log("Printing ID: ", id);
+    this.flightService.deleteFlight(id).subscribe(
+      (data: any) => {
+        console.log("Printing Data: ", data);
+        this.getFlights();
+      },
+      (error) => {
+        console.log("Error:", error);
+      }
+    );
   }
+  
 
   trackbyFlightDetail(index: number, flightDetail: any): number {
     console.log("Printing Index and Flight Details: ", index, flightDetail)

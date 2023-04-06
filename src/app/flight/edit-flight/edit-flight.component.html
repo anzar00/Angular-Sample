@@ -1,2 +1,49 @@
-<p>edit-flight works!</p>
-<button class="btn" routerLink="/dashboard">Back</button>
+<div class="container">
+    <div class="mt-2 mb-2">
+        <h1>Flight Application</h1>
+        <hr>
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+        <h1>Edit Flight</h1>
+        <button class="btn btn-primary" routerLink="/dashboard">Back</button>
+    </div>
+    <hr>
+    <div class="container formContainer mt-5">
+        <!-- Form to edit flight -->
+        <form [formGroup] = "flightForm" (submit)="onSubmit()" class="myForm">
+            <div>
+                <label class="form-label" for="flightName">Flight Name</label>
+                <input class="form-control" type="text" formControlName="flightName" id="flightName" placeholder="{{ flightDetails.flightName }}">
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-md-6">
+                    <label class="form-label" for="from">From Location</label>
+                    <input class="form-control" type="text" formControlName="from" id="from" placeholder="{{ flightDetails.location.from }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="to">To Location</label>
+                    <input class="form-control" type="text" formControlName="to" id="to" placeholder="{{ flightDetails.location.to }}">
+                </div>
+            </div>
+            <div>
+                <label class="form-label" for="cost">cost</label>
+                <input class="form-control" type="text" formControlName="cost" id="cost" placeholder="{{ flightDetails.cost }}">
+            </div>
+            <div>
+                <label class="form-label" for="distance">distance</label>
+                <input class="form-control" type="text" formControlName="distance" id="distance" placeholder="{{ flightDetails.distance }}">
+            </div>
+            <div>
+                <label class="form-label" for="availability">availability</label>
+                <select class="form-control" formControlName="availability" id="availability">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+            </div>
+            <div class="mt-2">
+                 <button type="submit" class="btn btn-success px-2">Edit</button>
+            </div>
+        </form>
+    </div>
+
+</div>

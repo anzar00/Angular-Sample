@@ -24,13 +24,13 @@
     },
     {
       "id": 3,
-      "flightName": "AirAsia",
+      "flightName": "Ingdigo",
       "location": {
-        "from": "Kolkata",
-        "to": "Chennai"
+        "from": "Bangalore",
+        "to": "Srinagar"
       },
-      "cost": 4000,
-      "distance": 1360,
+      "cost": "15000",
+      "distance": "3000",
       "availability": true
     },
     {
@@ -62,20 +62,9 @@
         "from": "Jaipur",
         "to": "New Delhi"
       },
-      "cost": 3500,
+      "cost": "3800",
       "distance": 280,
       "availability": true
-    },
-    {
-      "flightName": "",
-      "location": {
-        "from": "",
-        "to": ""
-      },
-      "price": 0,
-      "distance": 0,
-      "availability": true,
-      "id": 7
     }
   ]
 }

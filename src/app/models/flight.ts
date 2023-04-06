@@ -5,7 +5,7 @@ export interface Flight {
         from: string | null;
         to: string | null;
     }
-    price: number | null;
+    cost: number | null;
     distance: number | null;
     availability: boolean | null;
 
