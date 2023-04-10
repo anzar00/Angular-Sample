@@ -54,4 +54,8 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  helloworld() {
+    return "Hello World";
+  }
+
 }
